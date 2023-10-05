@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--mainBackgroundColor);
+}
+
+body {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+:root {
+  --mainBackgroundColor: #FFFFFF;
+  --backgroundColor1: #8F8E8E;
+  --backgroundColor2: #3A3A3A;
+  --backgroundColor3: #EFEFEF;
+  --backgroundColor4: #d4d4d4;
+
+
+  --mainTextColor: #000000;
+  --textColor1: #EFEFEF;
+  --textColor2: #F44E4E;
+  --textColor3: #0d290cbe;/* 63% vissability */
+
+  
+}
+
+.App {
+  position: relative;
+}
+
+.NAVBAR {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.HOME {
+  margin-top: 60px;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
