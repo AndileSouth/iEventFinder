@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iEventFinder/static/css/main.b5a8b57d.css",
+    "main.js": "/iEventFinder/static/js/main.fa13a9c3.js",
+    "index.html": "/iEventFinder/index.html",
+    "main.b5a8b57d.css.map": "/iEventFinder/static/css/main.b5a8b57d.css.map",
+    "main.fa13a9c3.js.map": "/iEventFinder/static/js/main.fa13a9c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5a8b57d.css",
+    "static/js/main.fa13a9c3.js"
+  ]
+}
