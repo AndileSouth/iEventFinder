@@ -33,7 +33,7 @@ const NAVBAR = () => {
             <div className="navbar-content row">
 
                 <div className="brand row">
-                    <h2 id='logo' className='cursor'> <Link to={`/`}> iEventFinder</Link></h2>
+                    <h2 id='logo' className='cursor'> <Link to={`/iEventFinder`}> iEventFinder</Link></h2>
 
                     <div id='searchBar' className="searchBar row md">
                         <input type="text" placeholder='Search'/>

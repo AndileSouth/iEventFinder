@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NAVBAR/>
       <Routes>
-          <Route exact path="/" element={<HOME/>}/>
+          <Route exact path="/iEventFinder" element={<HOME/>}/>
           <Route exact path="/menu" element={<MENU/>}/>
          
         </Routes>
