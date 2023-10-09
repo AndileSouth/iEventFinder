@@ -32,6 +32,8 @@ const HOME = () => {
   }; */
 
 
+  // slider
+
   const [sliderOptions, setSliderOptions] = useState([
     "All", "Music", "Health", "Sports", "Free"
   ]);
@@ -66,6 +68,44 @@ const HOME = () => {
   };
 
     
+  // fetches
+
+  const [data, setData] = useState([
+    "fetch1","fetch2","fetch3","fetch4","fetch5","fetch6","fetch7","fetch8","fetch9"
+  ]);
+
+  // location vissability 
+
+  function showLocation() {
+    const locations = document.querySelector('.location-search');
+
+    const computedStyle = window.getComputedStyle(locations);
+
+    const display = computedStyle.getPropertyValue('display');
+
+    if(display === 'none') {
+      locations.style.display = 'block'
+    } else {
+      locations.style.display = 'none'
+    }
+  }
+
+  // sort options
+
+  function showSort() {
+    // remember to fix after click
+    const sortOpts = document.getElementById('sort-opts')
+
+    const computedStyle = window.getComputedStyle(sortOpts);
+
+    const display = computedStyle.getPropertyValue('display');
+
+    if(display === 'none') {
+      sortOpts.style.display = 'block'
+    } else {
+      sortOpts.style.display = 'none'
+    }
+  }
     
     return ( 
         <div className="HOME">
@@ -114,11 +154,21 @@ const HOME = () => {
 
               <div className="event-opt-settings">
                 <h4 className='row'><span className='md'>All Events in </span>
-                <span className="location cursor">
+                <span className="location cursor" onClick={showLocation}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill='currentcolor' height="1em" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                     Durban
                 </span>
+
+                <div className="location-search col">
+
+                 <div className='cursor'>loading...</div> 
+                 <div className='cursor'>loading...</div> 
+                 <div className='cursor'>loading...</div> 
+
+                </div>
                 </h4>
+
+                
 
                 <div className="all-opts row">
 
@@ -130,7 +180,15 @@ const HOME = () => {
                     <li className="opts cursor">Online</li>
                 </ul>
 
-                <div className="opts cursor">Sort</div>
+                <div id='sort' className="opts col sort" onClick={showSort}>
+                   <p className='cursor'>Sort</p>
+                  <div id='sort-opts' className="sort-opts">
+                    <div className='cursor'>Popular</div>
+                    <div className='cursor'>New</div>
+                    <div className='cursor'>A-Z</div>
+                    <div className='cursor'>Z-A</div>
+                  </div>
+                  </div>
 
                 </div>
                 
@@ -143,15 +201,12 @@ const HOME = () => {
                 </p>
 
                 <div className="events">
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
-                    <div className="event"></div>
+
+                    {data.map(data => (
+                      <div className="event">{data}</div>
+                      )) }
+                    {/* <div className="event"></div> */}
+
                 </div>
               </div>
                 
